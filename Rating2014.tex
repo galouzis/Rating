@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{a4wide}
+\usepackage[english]{babel}
+
+\pagestyle{empty}
+
+\usepackage{ifpdf}
+\ifpdf                                  % for at køre PDFLatex
+   \usepackage[T1]{fontenc}
+   %\usepackage{aeguill}
+   \usepackage[pdftex]{graphicx,color}  % for at indsætte figurer
+\else                                   % hvis man kører PDFLatex
+   \usepackage[T1]{fontenc}
+   \usepackage[dvips]{color}            % for at kunne bruge farver
+   \usepackage[dvips]{graphicx}         % for at indsætte figurer
+ \fi
+
+\addtolength{\voffset}{-2cm}
+%\usepackage[pdftex,colorlinks=false]{hyperref}
+
+\begin{document}
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{{rating14}}
+    \includegraphics[width=0.95\textwidth]{{Dev2014}}
+
+    \begin{tabular}{|c r @{.} l r @{.} l r @{.} l| }
+     \hline %
+     \multicolumn{7}{|c|}{\textbf{Correlations}} \\
+     \hline
+     \textbf{Year} & \multicolumn{2}{c}{\textbf{Single}}&
+      \multicolumn{2}{c}{\textbf{Dubbel}}& \multicolumn{2}{c|}{\textbf{S-D}}\\
+     2009      & -0&93159 & -0&29244 &  0&45340 \\
+     2010      & -0&56894 & -0&60553 &  0&04539 \\
+     2011      & -0&85403 & -0&04435 & -0&07364 \\
+     2012      & -0&33466 & -0&96018 &  0&28897 \\
+     2013      &  0&40603 &  0&79704 &  0&39675 \\
+     2014      & -0&45250 & -0&96048 &  0&35195 \\
+     2009-2014 & -0&83941 & -0&68381 &  0&82165 \\
+     \hline %
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+\end{document}
